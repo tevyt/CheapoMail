@@ -1,0 +1,17 @@
+label{
+    display: inline-block;
+    width: 80px;
+}
+div#form{
+    background-color: #e3e3e3;
+    padding: 20px;
+    width: 260px;
+    margin: 200px 500px;
+}
+body{
+    font-family: "Tahoma";
+}
+span#cheap{
+    font-family: "Papyrus";
+    font-size: 1.25em;
+}

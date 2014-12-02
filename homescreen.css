@@ -1,0 +1,62 @@
+div.info{
+    display: inline-block;
+    background-color: transparent;
+}
+div.email{
+    background-color: #c2e8f4;
+    margin-bottom: 2px;
+    height:40px;
+}
+div#main{
+    background-color: transparent;
+    padding: 30px 30px 100px 30px;
+}
+div#inlay{
+    background-color: white;
+    opacity:0.5;
+    height: 430px;
+    width: 94.5%;
+    position: absolute;
+}
+body{
+    font-family: "Tahoma";
+    font-size: 1.5em;
+}
+div#title{
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+div#compose{
+    width: 100px;
+    margin: 10px 20px 10px 1180px;
+    background-color: white;
+}
+span#cheap{
+    font-family: "Papyrus";
+    font-size: 1.5em;
+    color: white;
+}
+span.admin{
+    font-family: "Times New Roman";
+    color: white;
+}
+body{
+    background-image: url(HD_Wallpapers.jpg);
+}
+div#email{
+    background-color: white;
+    height: 330px;
+    width: 94.5%;
+    position: fixed;
+    visibility: hidden;
+}
+div#com{
+    background-color: white;
+    height: 330px;
+    width: 35%;
+    position: fixed;
+    margin-top: 125px;
+    margin-left: 840px;
+    border: 5px solid #123456;
+    visibility: hidden;
+}
