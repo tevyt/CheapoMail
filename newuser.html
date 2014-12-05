@@ -4,7 +4,7 @@
         <link href="newuser.css" type="text/css" rel="stylesheet">
     </head>
     <h1>New User</h1>
-    <form id="newUserForm" name="newUserForm">
+    <form id="newUserForm" name="newUserForm" method="post" action="newuser.php">
         <label for = "firstname">First Name</label>
         <input type="text" name="firstname">
         <label for="lastName">LastName</label>
@@ -13,5 +13,6 @@
         <input type="password" name="password">
         <label for = "username">Username</label>
         <input type = "text" name = "username">
+        <input type="submit" value="Create User">
     </form>
 </html>

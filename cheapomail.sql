@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 02, 2014 at 12:23 PM
+-- Generation Time: Dec 05, 2014 at 12:39 PM
 -- Server version: 5.5.40-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.5
 
@@ -57,13 +57,19 @@ CREATE TABLE IF NOT EXISTS `Message_read` (
 
 CREATE TABLE IF NOT EXISTS `User` (
   `id` int(255) unsigned NOT NULL AUTO_INCREMENT,
-  `first name` varchar(255) DEFAULT NULL,
-  `last name` varchar(255) DEFAULT NULL,
-  `password` varchar(255) DEFAULT NULL,
-  `username` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `FirstName` varchar(255) NOT NULL,
+  `LastName` varchar(255) NOT NULL,
+  `Password` varchar(255) NOT NULL,
+  `UserName` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `User`
+--
+
+INSERT INTO `User` (`id`, `FirstName`, `LastName`, `Password`, `UserName`) VALUES
+(1, 'Travis', 'Smith', 'datatraveler', 'tevyt');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
