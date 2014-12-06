@@ -10,19 +10,20 @@ if ($database) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     if (strlen($username)!=0 && strlen($password)!=0) {
-        echo "User Not Found";
+        echo "User Not Found"
         $getuser = mysql_query("SELECT * FROM user WHERE UserName LIKE '%$username%' AND Password LIKE '%$password%';");
         if ($getuser){
             while($row = mysql_fetch_array($getuser)) {
+                $_SESSION['login_user']=$username;
                 header("Location: homescreen.html");
             }
         }
     }
     else {
-        echo "no parameters";
+        echo "Username or password not entered";
     }
 }
 else {
-    echo "no database";
+    echo "Database error";
 }
 ?>
