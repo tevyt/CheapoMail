@@ -1,0 +1,16 @@
+input{
+    display: block;
+}
+
+label{
+    display: block;
+}
+
+#password{
+    display: inline;
+}
+
+#passwordError{
+    background-color: red;
+    width: 20%;
+}
