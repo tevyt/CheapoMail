@@ -17,7 +17,6 @@ div#inlay{
     height: 430px;
     width: 94.5%;
     position: absolute;
-    visibility: hidden;
 }
 body{
     font-family: "Tahoma";
@@ -50,7 +49,6 @@ div#email{
     width: 94.5%;
     position: fixed;
     opacity: 0.65;
-    /*visibility: hidden;*/
 }
 div#com{
     text-align: center;
@@ -62,11 +60,10 @@ div#com{
     margin-left: 420px;
     border: 5px solid #58a2f5;
     opacity: 0.85;
-    visibility: hidden;
 }
 textarea{
     background-color: #a5bdd3;
 }
 .hide{
-    visibility: hidden
+    visibility: hidden;
 }
