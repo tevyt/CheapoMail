@@ -32,7 +32,7 @@ div#compose{
     background-color: white;
 }
 span#cheap{
-    font-family: "Papyrus";
+    font-family: "Papyrus", "Bookman", "Purisa Medium", "Secret Recipe", "Cocktail Script", serif;
     font-size: 1.5em;
     color: white;
 }
@@ -52,11 +52,11 @@ div#email{
 }
 div#com{
     background-color: white;
-    height: 330px;
+    height: 333px;
     width: 35%;
     position: fixed;
-    margin-top: 125px;
+    margin-top: 122px;
     margin-left: 840px;
     border: 5px solid #123456;
-    visibility: hidden;
+    /*visibility: hidden;*/
 }
