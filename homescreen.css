@@ -17,14 +17,15 @@ div#inlay{
     height: 430px;
     width: 94.5%;
     position: absolute;
+    visibility: hidden;
 }
 body{
     font-family: "Tahoma";
     font-size: 1.5em;
 }
 div#title{
-    border-bottom: 1px solid white;
-    border-top: 1px solid white;
+    border-bottom: 1px solid #a5bdd3;
+    border-top: 1px solid #a5bdd3;
 }
 div#compose{
     width: 100px;
@@ -44,19 +45,28 @@ body{
     background-image: url(HD_Wallpapers.jpg);
 }
 div#email{
-    background-color: white;
-    height: 330px;
+    background-color: #a5bdd3;
+    height: 430px;
     width: 94.5%;
     position: fixed;
-    visibility: hidden;
+    opacity: 0.65;
+    /*visibility: hidden;*/
 }
 div#com{
-    background-color: white;
+    text-align: center;
+    background-color: #a5bdd3;
     height: 333px;
     width: 35%;
     position: fixed;
-    margin-top: 122px;
-    margin-left: 840px;
-    border: 5px solid #123456;
-    /*visibility: hidden;*/
+    margin-top: 21px;
+    margin-left: 420px;
+    border: 5px solid #58a2f5;
+    opacity: 0.85;
+    visibility: hidden;
+}
+textarea{
+    background-color: #a5bdd3;
+}
+.hide{
+    visibility: hidden
 }
