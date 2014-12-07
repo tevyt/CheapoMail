@@ -9,17 +9,18 @@
             <div id="admin"><span class="admin"><a href="logout.php">Logout</a></span>
                 <div id="compose">Compose</div>
             </div>
-            <div id="inlay">inlay
+            <div id="inlay">inlay <!--This div's default is to be visible until either compose or an email are clicked-->
                 <div class="email">1
                     <div class="info">a</div>
                     <div class="info">b</div>
                     <div class="info">c</div>
                 </div>
             </div>
-            <div id="email" class="hide">email</div> <!--visibility set to hidden until email clicked to reveal specific details-->
-            <div id="com" class="hide">New Message <!--visibility set to hidden until compose button is clicked-->
+            <div id="email" class="hide">email</div> <!--When email is clicked class hide will be removed from this and added to inlay and compose box-->
+            <div id="com" class="hide">New Message <!--When "Compose" is clicked the class hide will be removed from this and added to inlay and email-->
                 <form id="composeform">
-                    <textarea cols="65" rows="18"></textarea>
+                    <input id="recipient" type="text" name="recipient" value="To: "/>
+                    <textarea cols="65" rows="17"></textarea>
                     <input id="send" type="submit" value="Send">
                 </form>
             </div>
