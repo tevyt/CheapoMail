@@ -19,8 +19,15 @@ form{
     font-size: 1em;
 }
 form{
-    background-color: #e3e3e3;
+    background-color: #dff2f5;
     padding: 20px;
     width: 260px;
-    margin: 100px 500px;
+    margin: 150px auto;
+}
+body{
+    background-image: url(HD_Wallpapers.jpg);
+}
+span{
+    font-family: "Tahoma";
+    font-size: 2em;
 }
