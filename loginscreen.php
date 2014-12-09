@@ -10,8 +10,10 @@ if ($database) {
     $username = $_POST['username'];
     $password = $_POST['password'];
     if (strlen($username)!=0 && strlen($password)!=0) {
-        echo "User Not Found"
-        $getuser = mysql_query("SELECT * FROM user WHERE UserName LIKE '%$username%' AND Password LIKE '%$password%';");
+        ?>
+        <li> User not found</li>
+    <?php
+        $getuser = mysql_query("SELECT * FROM user WHERE UserName='$username' AND Password='$password'");
         if ($getuser){
             while($row = mysql_fetch_array($getuser)) {
                 $_SESSION['login_user']=$username;

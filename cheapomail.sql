@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Dec 05, 2014 at 12:39 PM
--- Server version: 5.5.40-0ubuntu0.14.04.1
--- PHP Version: 5.5.9-1ubuntu4.5
+-- Host: 127.0.0.1
+-- Generation Time: Dec 09, 2014 at 02:33 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,54 +23,45 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `Message`
+-- Table structure for table `user`
 --
 
-CREATE TABLE IF NOT EXISTS `Message` (
-  `id` int(255) unsigned NOT NULL AUTO_INCREMENT,
-  `body` text,
-  `subject` varchar(255) NOT NULL,
-  `user_id` int(255) unsigned NOT NULL,
-  `recipient_ids` int(255) unsigned NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Message_read`
---
-
-CREATE TABLE IF NOT EXISTS `Message_read` (
-  `id` int(255) NOT NULL AUTO_INCREMENT,
-  `message_id` int(255) NOT NULL,
-  `reader_id` int(255) NOT NULL,
-  `date` date NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `User`
---
-
-CREATE TABLE IF NOT EXISTS `User` (
-  `id` int(255) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `user` (
+`id` int(255) unsigned NOT NULL,
   `FirstName` varchar(255) NOT NULL,
   `LastName` varchar(255) NOT NULL,
   `Password` varchar(255) NOT NULL,
-  `UserName` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `UserName` varchar(255) NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `User`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `User` (`id`, `FirstName`, `LastName`, `Password`, `UserName`) VALUES
-(1, 'Travis', 'Smith', 'datatraveler', 'tevyt');
+INSERT INTO `user` (`id`, `FirstName`, `LastName`, `Password`, `UserName`) VALUES
+(1, 'Travis', 'Smith', 'datatraveler', 'tevyt'),
+(2, 'Justen', 'Morgan', 'PooPooPoo1', 'moo'),
+(3, 'First', 'Second', 'Password1', 'user');
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+ ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+MODIFY `id` int(255) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
