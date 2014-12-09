@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <html>
     <head>
         <title>Inbox ...</title>
@@ -5,7 +8,7 @@
     </head>
     <body>
         <div id="main"> <span id="cheap">CheapoMail</span>
-            <div id="title"><span class="admin">User Name</span></div>
+            <div id="title"><span class="admin"><?php echo $_SESSION["first_name"]. " " .$_SESSION["last_name"]?></span></div>
             <div id="admin"><span class="admin"><a href="logout.php">Logout</a></span>
                 <div id="compose">Compose</div>
             </div>
