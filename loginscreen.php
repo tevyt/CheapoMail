@@ -9,6 +9,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 $sql = "SELECT * FROM User WHERE UserName = '$username' AND Password = '$password'";
 $database = mysql_select_db($dbname,$connection);
+
 session_start();
 $rows = mysql_query($sql);
 if(mysql_num_rows($rows) == 0){
