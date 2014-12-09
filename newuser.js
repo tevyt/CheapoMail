@@ -46,5 +46,8 @@ function validate(){
    var passwordField = $("password");
    passwordField.onblur = validatePassword;
    var valid = passwordField.onblur();
+   if(valid){
+       alert("New User added");
+   }
    return valid;
 }
