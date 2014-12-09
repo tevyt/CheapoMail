@@ -18,7 +18,7 @@ window.onload = function () {
 
 	function loginUser(response){
 		if( response.status == 200){
-			$('login').innerHTML = response.responseText;
+			location.href = "homescreen.php";
         	}
 		
 	}

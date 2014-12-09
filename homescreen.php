@@ -5,6 +5,8 @@ session_start();
     <head>
         <title>Inbox ...</title>
         <link rel="stylesheet" type="text/css" href="homescreen.css"/>
+	<script src = "homescreen.js" type="text/javascript"></script>
+	<script src = "prototype.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="main"> <span id="cheap">CheapoMail</span>

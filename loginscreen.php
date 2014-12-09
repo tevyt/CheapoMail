@@ -24,7 +24,7 @@ else{
 		$_SESSION["last_name"] = $row["LastName"];
 		$_SESSION["username"]= $row["UserName"];
 		$_SESSION["password"] = $row["Password"];
-		header("Location: homescreen.php");
+		header('HTTP/1.1 200 OK', true, 200);
     }
    
 }
