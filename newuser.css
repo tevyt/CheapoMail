@@ -14,3 +14,13 @@ label{
     background-color: red;
     width: 20%;
 }
+form{
+    font-family: "Tahoma";
+    font-size: 1em;
+}
+form{
+    background-color: #e3e3e3;
+    padding: 20px;
+    width: 260px;
+    margin: 100px 500px;
+}
