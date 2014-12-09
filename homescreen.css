@@ -27,8 +27,11 @@ div#title{
     border-top: 1px solid #a5bdd3;
 }
 div#compose{
-    width: 100px;
-    margin: 10px 20px 10px 1180px;
+    width: 110px;
+    margin-top:10px;
+    margin-right:20px;
+    margin-bottom:10px;
+    margin-left:91.3%;
     background-color: white;
 }
 span#cheap{
