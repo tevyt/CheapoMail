@@ -5,15 +5,17 @@
         <script src="loginscreen.js" type="text/javascript"></script>
         <script src="prototype.js" type="text/javascript"></script>
     </head>
-    <body> 
+    <body id = "login"> 
         <div id="form"><span id="cheap">CheapoMail</span>
+	    <div id = "error"></div>
             <img src="user2.png"/>
-            <form id="loginform" action="loginscreen.php" method="post">
+            <div id="loginform">
                 <label>Username: </label><input id="username" name="username" type="text"/> <br> <br>
                 <label>Password: </label><input id="password" name="password" type="password"/> <br> <br>
-                <input type="button" id="login" name="Login" value="Login" onclick="javascript/userlogin();"></button>
-            </form>
+                <input type="button" id="loginButton" name="Login" value="Login"/>
+            </div>
             <a href="newuser.html">New User</a>
         </div>
+	
     </body>
 </html>

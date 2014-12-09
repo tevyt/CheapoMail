@@ -14,6 +14,8 @@ session_start();
 $rows = mysql_query($sql);
 if(mysql_num_rows($rows) == 0){
 	echo "<p>Invalid username or password</p>";
+	header('HTTP/1.1 401 Unauthorized', true, 401);
+	exit;
 }
 else{
 	while($row = mysql_fetch_array($rows)){
@@ -23,7 +25,8 @@ else{
 		$_SESSION["username"]= $row["UserName"];
 		$_SESSION["password"] = $row["Password"];
 		header("Location: homescreen.php");
-	}
+    }
+   
 }
 
 
