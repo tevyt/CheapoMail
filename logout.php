@@ -2,6 +2,6 @@
 echo $_SESSION["first_name"];
 session_start();
 if(session_destroy()) {
-    header("Location: loginscreen.html");
+    header("Location: index.html");
 }
 ?>

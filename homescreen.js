@@ -2,7 +2,7 @@ window.onload = function(){
 
 	composeButton = $("compose");
 	composeButton.onclick = function(){
-		alert("Clicked compose");
+		location.href = "composemessage.html";
 	};
 	
 };
