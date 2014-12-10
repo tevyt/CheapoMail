@@ -1,9 +1,6 @@
+
 div.info{
-    display: inline-block;
-    background-color: transparent;
-}
-div.email{
-    background-color: #c2e8f4;
+    background-color: #a5bdd3;
     margin-bottom: 2px;
     height:40px;
 }
@@ -27,12 +24,7 @@ div#title{
     border-top: 1px solid #a5bdd3;
 }
 #compose{
-    width: 110px;
-    margin-top:10px;
-    margin-right:20px;
-    margin-bottom:10px;
-    margin-left:91.3%;
-    background-color: white;
+    padding: 4px;
 }
 span#cheap{
     font-family: "Papyrus", "Bookman", "Purisa Medium", "Secret Recipe", "Cocktail Script", serif;
@@ -48,7 +40,7 @@ body{
 }
 div#email{
     background-color: #a5bdd3;
-    height: 430px;
+    height: 400px;
     width: 94.5%;
     position: fixed;
     opacity: 0.65;
@@ -69,4 +61,31 @@ textarea{
 }
 .hide{
     visibility: hidden;
+}
+div#sent{
+    width: 150px;
+    background-color: transparent;
+}
+div#sub{
+    width: 300px;
+    background-color: transparent;
+}
+div.mail{
+    display: inline-block;
+}
+div.tab{
+    font-size: 0.75em;
+    display: inline-block;
+    background-color: white;
+    color: #003366;
+    opacity: 0.7;
+    padding: 4px;
+}
+div.tab1{
+    font-size: 0.75em;
+    display: inline-block;
+    background-color: #003366;
+    color: white;
+    opacity: 0.7;
+    padding: 4px;
 }

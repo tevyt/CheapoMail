@@ -25,6 +25,8 @@ window.onload = function () {
 
 	function failureFunction(response){
 		console.log(response.responseText); 
-		$('error').innerHTML = response.responseText;
+        if(response.status == 401){
+		  $('error').innerHTML = "Invalid username or password";
+        }
 	}
 };
