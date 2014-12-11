@@ -2,6 +2,9 @@ label{
     display: inline-block;
     width: 80px;
 }
+img {
+    padding-left:13px;
+}
 div#form{
     background-color: #e3e3e3;
     padding: 20px;
@@ -10,14 +13,16 @@ div#form{
 }
 body{
     font-family: "Tahoma";
-}
-span#cheap{
-    font-family: "Papyrus";
-    font-size: 1.25em;
+    background: url("HD_Wallpapers.jpg");
 }
 
 #error{
 	background-color:red;
-	width:20%;
-	margin-left:50%
+}
+
+#newuser{
+    margin-left:90px;
+}
+#loginButton {
+    margin-left:100px;
 }
