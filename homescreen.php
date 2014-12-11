@@ -29,7 +29,7 @@ $rows = mysql_query($q);
             <div id="admin">
                 <div class="tab" class="admin"><a href="logout.php">Logout</a></div>
                 <div class = "tab" id="compose">Compose</div>
-                <div class="tab" id="inbox">Inbox</div>
+                <div class="tab1" id="inbox">Inbox</div>
             </div>
             <br>
             <div id="inlay"> <!--This div's default is to be visible until either compose or an email are clicked-->
@@ -47,9 +47,9 @@ $rows = mysql_query($q);
                     }
              ?>
                     <div class = "info">
+                        <button class="mail1" id="<?php echo $row['id']?>" > </button>
                         <div class="mail" id = "sent"><?php echo $sender?></div>
                         <div class="mail" id = "sub"><?php echo $row["subject"]?></div>
-                        <button class="mail1" id="<?php echo $row['id']?>" >Read</button>
                     </div> 
             <?php
                 }

@@ -4,6 +4,12 @@ div.info{
     margin-bottom: 2px;
     height:40px;
 }
+button.mail1{
+    height:40px;
+    width:100%;
+    position: absolute;
+    background-color: transparent;
+}
 div#main{
     background-color: transparent;
     padding: 30px 30px 100px 30px;
@@ -64,13 +70,11 @@ textarea{
     visibility: hidden;
 }
 div#sent{
-    width: 150px;
+    margin-right: 5%;
     background-color: transparent;
 }
 div#sub{
-    width: 300px;
     background-color: transparent;
-    margin-left:25%;
 }
 div.mail{
     display: inline;
@@ -90,4 +94,7 @@ div.tab1{
     color: white;
     opacity: 0.7;
     padding: 4px;
+}
+label{
+    font-size: 0.75em;
 }

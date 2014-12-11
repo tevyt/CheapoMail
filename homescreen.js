@@ -1,6 +1,9 @@
 window.onload = function(){
     var arr = $$(".mail1");
+    var inbox = $("inbox");
+	var composeButton = $("compose");
     for (var i = 0; i<arr.length; i++){
+        inbox.className = "tab";
         arr[i].onclick = function(){
             $("inlay").style.display = "none";
             $("email").className = "";
@@ -11,12 +14,12 @@ window.onload = function(){
 		    onFailure: failureFunction});
         };
     }
-    var inbox = $("inbox");
     inbox.onclick = function(){
         $("email").className = "hide";
         $("inlay").style.display = "block";
         $("com").className = "hide";
         inbox.className = "tab1";
+        composeButton.className = "tab";
     }
     
     function displayMessage(response){
@@ -26,11 +29,11 @@ window.onload = function(){
     function failureFunction(response){
         alert("server error");
     }
-
-	composeButton = $("compose");
 	composeButton.onclick = function(){
         $("inlay").style.display = "none";
         $("com").className = "";
+        composeButton.className = "tab1";
+        inbox.className = "tab";
 	};
    
         
