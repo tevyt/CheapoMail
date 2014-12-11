@@ -6,7 +6,7 @@ $dbuser = "webuser";
 $dbpass = "password";
 $connection =  mysql_connect($dbhost,$dbuser,$dbpass);
 $id = $_SESSION["id"];
-$q = "SELECT * FROM message WHERE recipient_ids = '$id'";
+$q = "SELECT * FROM message WHERE recipient_ids = '$id' ORDER BY id DESC LIMIT 10";
 
 
 
@@ -42,6 +42,8 @@ $rows = mysql_query($q);
                     $sender = "";
                     while($value = mysql_fetch_array($values)){
                       $sender = $value["FirstName"]." ".$value["LastName"];
+
+
                     }
              ?>
                     <div class = "info">
@@ -61,7 +63,7 @@ $rows = mysql_query($q);
                 <form id="composeform" method="get" action="compose.php">
                     <label>To: </label><input id="recipient" type="text" name="recipient"/> <br>
                     <label>Subject: </label><input id="subject" type="text" name="subject"/>
-                    <textarea cols="65" rows="14" name = "message"></textarea>
+                    <textarea cols="60" rows="14" name = "message"></textarea>
                     <input id="send" type="submit" value="Send">
                 </form>
             </div>

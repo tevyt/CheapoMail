@@ -34,6 +34,7 @@ span#cheap{
 span.admin{
     font-family: "Times New Roman";
     color: white;
+    display:inline;
 }
 body{
     background-image: url(HD_Wallpapers.jpg);
@@ -69,9 +70,10 @@ div#sent{
 div#sub{
     width: 300px;
     background-color: transparent;
+    margin-left:25%;
 }
 div.mail{
-    display: inline-block;
+    display: inline;
 }
 div.tab{
     font-size: 0.75em;

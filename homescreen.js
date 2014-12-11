@@ -13,8 +13,9 @@ window.onload = function(){
     }
     var inbox = $("inbox");
     inbox.onclick = function(){
-        $("email").style.display = "none";
+        $("email").className = "hide";
         $("inlay").style.display = "block";
+        $("com").className = "hide";
         inbox.className = "tab1";
     }
     

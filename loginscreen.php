@@ -7,7 +7,7 @@ $dbpassword = "password";
 $connection =  mysql_connect($dbhost,$dbuser,$dbpassword);
 $username = $_POST['username'];
 $password = $_POST['password'];
-$sql = "SELECT * FROM User WHERE UserName = '$username' AND Password = '$password'";
+$sql = "SELECT * FROM user WHERE UserName = '$username' AND Password = '$password'";
 $database = mysql_select_db($dbname,$connection);
 
 session_start();

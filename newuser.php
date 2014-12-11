@@ -8,7 +8,7 @@ $firstName = $_POST["firstname"];
 $lastName = $_POST["lastname"];
 $password = $_POST["password"];
 $username = $_POST["username"];
-$insertQuery = "INSERT INTO User (FirstName , LastName, 
+$insertQuery = "INSERT INTO user (FirstName , LastName, 
 Password , Username) VALUES (:FirstName,:LastName,:Password,:Username)";
 $query = $connection->prepare($insertQuery);
 $query->execute(array(':FirstName'=>$firstName, ':LastName'=>$lastName, ':Password'=>$password,':Username'=>$username));

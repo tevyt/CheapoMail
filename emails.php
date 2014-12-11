@@ -7,14 +7,18 @@ $connection =  mysql_connect($dbhost,$dbuser,$dbpass);
 $database = mysql_select_db($dbname,$connection);
 $id = $_GET["id"];
 $q = "SELECT * FROM message WHERE id = '$id' ";
+
+
 $rows = mysql_query($q);
 $sender = 0;
 $name = "";
+$reader = "";
 
 while($row = mysql_fetch_array($rows)){
    $sender = $row["user_id"];
    $subject = $row["subject"];
    $body = $row["body"];
+   $reader  = $row["recipient_ids"];
 }
 $query = "SELECT * FROM user WHERE id = '$sender' ";
 $values = mysql_query($query);
@@ -22,10 +26,21 @@ while($value = mysql_fetch_array($values)){
   $name = $value["FirstName"] . " " . $value["LastName"];
 }
 
-
+$today = getdate();
+$date = $today['mday'].'/'.$today['mon'].'/'.$today['year'];
 echo"<h1>$subject</h1>
      <p>$name</p>
      <p>$body</p>";
+
+$readMessagesQuery = "SELECT * FROM message_read WHERE message_id = '$id' AND reader_ids = '$reader'";
+$readMessages = mysql_query($readMessagesQuery);
+
+if(mysql_num_rows($readMessages) == 0){
+    $connection = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
+    $newReadMessage = "INSERT INTO message_read (message_id, reader_id, date) VALUES (:message_id,:reader_id,:date)";
+    $query = $connection->prepare($newReadMessage);
+    $query->execute(array(':message_id'=>$id,':reader_id'=>$reader,':date'=>$date));
+}
      
 
 exit;
