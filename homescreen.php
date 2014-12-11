@@ -18,18 +18,24 @@ $rows = mysql_query($q);
 ?>
 <html>
     <head>
-        <title>Inbox ...</title>
+        <title>Cheapomail Inbox</title>
         <link rel="stylesheet" type="text/css" href="homescreen.css"/>
 	<script src = "homescreen.js" type="text/javascript"></script>
 	<script src = "prototype.js" type="text/javascript"></script>
     </head>
     <body>
-        <div id="main"> <span id="cheap">CheapoMail</span>
-            <div id="title"><span class="admin"><?php echo $_SESSION["first_name"]. " " .$_SESSION["last_name"]?></span></div><br>
+        <div id="main">
+            <img src="logo.gif">
+            <br>
+            <div id="title"><span class="admin"><?php echo $_SESSION["first_name"]. " " .$_SESSION["last_name"]?></span>
+                <div class="logout">
+            <a href="logout.php">Logout</a>
+                </div>
+            </div>
+            <br>
             <div id="admin">
-                <div class="tab" class="admin"><a href="logout.php">Logout</a></div>
-                <div class = "tab" id="compose">Compose</div>
                 <div class="tab1" id="inbox">Inbox</div>
+                <div class = "tab" id="compose">Compose</div>
             </div>
             <br>
             <div id="inlay"> <!--This div's default is to be visible until either compose or an email are clicked-->
@@ -62,7 +68,7 @@ $rows = mysql_query($q);
             <div id="com" class="hide">New Message <!--When "Compose" is clicked the class hide will be removed from this and added to inlay and email-->
                 <form id="composeform" method="get" action="compose.php">
                     <label>To: </label><input id="recipient" type="text" name="recipient"/> <br>
-                    <label>Subject: </label><input id="subject" type="text" name="subject"/>
+                    <label id="subject">Subject: </label><input id="subjectbox" type="text" name="subject"/>
                     <textarea cols="60" rows="14" name = "message"></textarea>
                     <input id="send" type="submit" value="Send">
                 </form>

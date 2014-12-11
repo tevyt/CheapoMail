@@ -1,3 +1,6 @@
+img{
+    margin-left:20px;
+}
 input{
     display: block;
 }
@@ -12,8 +15,11 @@ label{
 
 #passwordError{
     background-color: red;
-    width: 20%;
 }
+#headeruser{
+    text-align:center;
+}
+
 form{
     font-family: "Tahoma";
     font-size: 1em;

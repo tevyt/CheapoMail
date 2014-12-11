@@ -29,6 +29,11 @@ div#title{
     border-bottom: 1px solid #a5bdd3;
     border-top: 1px solid #a5bdd3;
 }
+.logout{
+    text-align:right;
+    clear:left;
+    float:right;
+}
 #compose{
     padding: 4px;
 }
@@ -97,4 +102,10 @@ div.tab1{
 }
 label{
     font-size: 0.75em;
+}
+#subject{
+    margin-left:22px;
+}
+#subjectbox{
+    margin-right:68px;
 }
