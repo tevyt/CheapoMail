@@ -5,4 +5,4 @@ Group Members:
 
 Travis Smith (tevyt),
 Jerene Ricketts (tanjerene),
-Justen Morgan (boshes as well as previously alyssialui)
+Justen Morgan (boshes, previously alyssialui)
