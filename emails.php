@@ -34,8 +34,8 @@ echo"<h3>From: $name</h3>
 
 $readMessagesQuery = "SELECT * FROM message_read WHERE message_id = '$id' AND reader_ids = '$reader'";
 $readMessages = mysql_query($readMessagesQuery);
-
-if( gettype($readMessages) != "boolean" && mysql_num_rows($readMessages) == 0){
+echo gettype($readMessages);
+if( mysql_num_rows($readMessages) == 0){
     $connection = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
     $newReadMessage = "INSERT INTO message_read (message_id, reader_id, date) VALUES (:message_id,:reader_id,:date)";
     $query = $connection->prepare($newReadMessage);
