@@ -5,8 +5,10 @@ $dbuser = "webuser";
 $dbpass = "password";
 $connection =  mysql_connect($dbhost,$dbuser,$dbpass);
 $database = mysql_select_db($dbname,$connection);
+error_reporting(E_ERROR | E_PARSE);
 $id = $_GET["id"];
 $q = "SELECT * FROM message WHERE id = '$id' ";
+
 
 
 $rows = mysql_query($q);
@@ -34,7 +36,7 @@ echo"<h3>From: $name</h3>
 
 $readMessagesQuery = "SELECT * FROM message_read WHERE message_id = '$id' AND reader_ids = '$reader'";
 $readMessages = mysql_query($readMessagesQuery);
-echo gettype($readMessages);
+
 if( mysql_num_rows($readMessages) == 0){
     $connection = new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpass);
     $newReadMessage = "INSERT INTO message_read (message_id, reader_id, date) VALUES (:message_id,:reader_id,:date)";
