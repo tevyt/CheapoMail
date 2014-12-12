@@ -28,8 +28,8 @@ while($value = mysql_fetch_array($values)){
 
 $today = getdate();
 $date = $today['mday'].'/'.$today['mon'].'/'.$today['year'];
-echo"<h1>$subject</h1>
-     <p>$name</p>
+echo"<h3>From: $name</h3>
+     <h2>$subject</h2>
      <p>$body</p>";
 
 $readMessagesQuery = "SELECT * FROM message_read WHERE message_id = '$id' AND reader_ids = '$reader'";
