@@ -42,14 +42,31 @@ $rows = mysql_query($q);
                             $sender = "";
                             while($value = mysql_fetch_array($values)){
                                 $sender = $value["FirstName"]." ".$value["LastName"];
+                        }
+                        $message = $row["id"];
+                        $q2 = "SELECT *FROM message_read WHERE message_id = '$message'";
+                        $readMessages = mysql_query($q2);
+                       
+                    if(mysql_num_rows($readMessages) == 0){
+                        ?>
+                        <div class = "info">
+                            <button class="mail1" id="<?php echo $row['id']?>" > </button>
+                            <div class="mail" class="unread" id = "sent" style="font-weight:bold"><?php echo $sender?></div>
+                            <div class="mail" class="unread" id = "sub" style="font-weight:bold"><?php echo $row["subject"]?></div>
+                        </div> 
+                    <?php
                     }
-             ?>
-                    <div class = "info">
-                        <button class="mail1" id="<?php echo $row['id']?>" > </button>
-                        <div class="mail" class="unread" id = "sent"><?php echo $sender?></div>
-                        <div class="mail" class="unread" id = "sub"><?php echo $row["subject"]?></div>
-                    </div> 
-            <?php
+                    else{
+                        ?>
+                        <div class = "info">
+                            <button class="mail1" id="<?php echo $row['id']?>" > </button>
+                            <div class="mail" class="read" id = "sent" style="font-weight:normal"><?php echo $sender?></div>
+                            <div class="mail" class="read" id = "sub" style="font-weight:normal"><?php echo $row["subject"]?></div>
+                        </div> 
+                        <?php
+                        
+                    }
+          
                 }
             ?>     
                 </div>
