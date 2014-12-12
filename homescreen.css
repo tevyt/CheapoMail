@@ -10,6 +10,14 @@ button.mail1{
     position: absolute;
     background-color: transparent;
 }
+a{
+    color: #a5bdd3;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+}
 div#main{
     background-color: transparent;
     padding: 30px 30px 100px 30px;
