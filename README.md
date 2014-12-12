@@ -3,6 +3,6 @@ CheapoMail
 Project 4 for INFO2180.
 Group Members:
 
-Travis Smith (tevyt),
-Jerene Ricketts (tanjerene),
-Justen Morgan (boshes, previously alyssialui)
+Travis Smith, 620065811 (tevyt),
+Jerene Ricketts, 620067270 (tanjerene),
+Justen Morgan, 620070138 (boshes, previously alyssialui)
