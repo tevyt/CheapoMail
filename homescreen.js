@@ -20,6 +20,7 @@ window.onload = function(){
         $("com").className = "hide";
         inbox.className = "tab1";
         composeButton.className = "tab";
+        window.location.reload();
     }
     
     function displayMessage(response){
