@@ -12,7 +12,7 @@ $rows = mysql_query($q);
 ?>
 <html>
     <head>
-        <title>Cheapomail Inbox</title>
+        <title>Inbox <?php echo $_SESSION["username"]?></title>
         <link rel="stylesheet" type="text/css" href="homescreen.css"/>
         <script src = "homescreen.js" type="text/javascript"></script>
 	    <script src = "prototype.js" type="text/javascript"></script>
@@ -46,8 +46,8 @@ $rows = mysql_query($q);
              ?>
                     <div class = "info">
                         <button class="mail1" id="<?php echo $row['id']?>" > </button>
-                        <div class="mail" id = "sent"><?php echo $sender?></div>
-                        <div class="mail" id = "sub"><?php echo $row["subject"]?></div>
+                        <div class="mail" class="unread" id = "sent"><?php echo $sender?></div>
+                        <div class="mail" class="unread" id = "sub"><?php echo $row["subject"]?></div>
                     </div> 
             <?php
                 }

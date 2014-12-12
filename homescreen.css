@@ -84,6 +84,9 @@ div#sub{
 div.mail{
     display: inline;
 }
+div.unread{
+    font-weight: bold;
+}
 div.tab{
     font-size: 0.75em;
     display: inline-block;

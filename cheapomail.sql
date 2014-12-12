@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 10, 2014 at 11:27 PM
+-- Generation Time: Dec 12, 2014 at 02:52 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `recipient_ids` int(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`,`recipient_ids`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
 
 --
 -- Dumping data for table `message`
@@ -47,7 +47,11 @@ INSERT INTO `message` (`id`, `body`, `subject`, `user_id`, `recipient_ids`) VALU
 (4, 'I am doing web dev!', 'Web Dev', 4, 4),
 (5, 'I am doing web dev!', 'Web Dev', 4, 4),
 (6, 'It''s happening!!!!', 'IEEEXtreeme', 5, 4),
-(7, '', '', 4, 0);
+(7, '', '', 4, 0),
+(8, 'How ya doing?', 'Hello World!', 4, 4),
+(9, 'Hai!', 'moo', 2, 2),
+(10, 'Hello World! :D', 'Hello', 6, 6),
+(11, 'cool!', 'Drop Down menu', 6, 6);
 
 -- --------------------------------------------------------
 
@@ -59,10 +63,18 @@ CREATE TABLE IF NOT EXISTS `message_read` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `message_id` int(11) NOT NULL,
   `reader_id` int(11) NOT NULL,
-  `date` date NOT NULL,
+  `date` varchar(10) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `message_id` (`message_id`,`reader_id`,`date`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
+
+--
+-- Dumping data for table `message_read`
+--
+
+INSERT INTO `message_read` (`id`, `message_id`, `reader_id`, `date`) VALUES
+(35, 10, 6, '12/12/2014'),
+(34, 11, 6, '12/12/2014');
 
 -- --------------------------------------------------------
 
